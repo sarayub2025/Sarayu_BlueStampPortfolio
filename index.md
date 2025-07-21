@@ -40,7 +40,7 @@ I also learned how speech recognition and text-to-speech work together with an A
 
 
 # Schematics 
-![Headstone Image](Screenshot 2025-07-21 141423.png)
+![Headstone Image](Schematics)
 
 
 # Code
