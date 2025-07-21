@@ -17,16 +17,19 @@ You should comment out all portions of your portfolio that you have not complete
   
 # My Project
 **Project Summary**
+
 For my project, I built a fully functional AI voice assistant using a Raspberry Pi 5. The voice assistant listens to my voice through a USB microphone and talks back using a speaker. I wrote the code in Python and used speech recognition so it can understand what I say and OpenAI’s API so it can respond like ChatGPT. I also added text-to-speech so I can actually hear it talk back to me.
 
 To show that the assistant can control something in real life, I connected an LED light on a breadboard. When I tell the assistant to turn the light on or off, it sends a signal through the Raspberry Pi’s GPIO pins to do it.
 
 **Challenges I Faced and How I Overcame Them**
+
 One of the biggest challenges I faced was figuring out how to connect the relay module and the LED the right way. The relay module I got was different from the one shown in the instructions, so I had to figure out which pins were which by reading diagrams and looking things up online. I also messed up the wiring at first, which made the LED not turn on or off when I gave a command.
 
 After a lot of trial and error, searching online, and asking my instructors for help, I finally figured out how to connect everything correctly. Once the wiring was fixed and matched with my code, the light finally worked the way it was supposed to. This challenge taught me how important it is to double-check circuit diagrams and be patient when testing hardware.
 
 **What I Learned and Next Steps**
+
 Through this project, I learned how to set up a Raspberry Pi, use GPIO pins, and write Python code to connect hardware and software. I also learned how voice recognition and text-to-speech work together with AI like ChatGPT. In the future, I want to add more commands so my assistant can control more devices, like play music when I ask.
 
 # Schematics 
