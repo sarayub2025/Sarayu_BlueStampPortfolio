@@ -130,6 +130,50 @@ lgpio.gpiochip_close(h)
 print("GPIO cleanup completed")
 ```
 
+
+```python
+import lgpio
+import time
+
+RELAY_GPIO_PIN = 17
+
+# Open a GPIO chip (0 is usually the default)
+h = lgpio.gpiochip_open(0)
+
+# Set up GPIO pin as output for the relay
+lgpio.gpio_claim_output(h, RELAY_GPIO_PIN)
+
+def turn_on_light():
+    lgpio.gpio_write(h, RELAY_GPIO_PIN, 1)
+    print("Light turned ON")
+
+def turn_off_light():
+    lgpio.gpio_write(h, RELAY_GPIO_PIN, 0)
+    print("Light turned OFF")
+
+try:
+    while True:
+        command = input("Type 'on' to turn ON, 'off' to turn OFF, or 'exit' to quit: ").strip().lower()
+        if command == "on":
+            turn_on_light()
+        elif command == "off":
+            turn_off_light()
+        elif command == "exit":
+            break
+        else:
+            print("Invalid command.")
+        time.sleep(0.1)
+
+except KeyboardInterrupt:
+    print("\nProgram stopped by user.")
+
+finally:
+    # Clean up GPIO
+    turn_off_light()
+    lgpio.gpiochip_close(h)
+    print("GPIO cleaned up.")
+```
+
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
