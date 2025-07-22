@@ -39,19 +39,23 @@ Through this project, I learned how to set up a Raspberry Pi and connect hardwar
 I also learned how speech recognition and text-to-speech work together with an AI model to make a real voice assistant. In the future, I want to add more voice commands so my assistant can control more lights or even play music when I say, “Hey Tom, play music.”
 
 # My Modifications
-**Voice Assistant Music Feature — Project Summary**
+**Modifications Summary**
 
-For my Raspberry Pi voice assistant project, I added a music playback feature to make my assistant, Tom, more advanced. The goal was to have Tom not only answer questions using ChatGPT and control an LED light, but also be able to play and stop a song when told to do so.
+For my Raspberry Pi voice assistant project, I made two extra improvements to make my assistant, Tom, feel more like a real smart home helper. First, I added a feature so Tom can play and stop music when I say voice commands. Second, I made Tom respond to me by saying my name in every reply when I turn the light on or off or when I play or stop music. This made the whole experience feel more personal and fun.
 
-I downloaded a copyright-free MP3 file and saved it in my project folder. To play the music, I used the pygame as it lets me start and stop music in the middle of the program. I added extra commands to my Python code so when I say “play music,” Tom starts the song, and when I say “stop music,” it stops the song right away. This made my voice assistant more like a real smart speaker.
-The voice assistant listens for commands using the microphone and converts my speech into text. If it hears me say “play music,” it loads the MP3 file and plays it in the background. If I say “stop music,” it stops playing the file. This happens while the rest of the assistant still works normally, so I can still say “turn on the light,” “turn off the light,” or talk to Tom for answers using the OpenAI API.
+I downloaded a copyright-free MP3 file and saved it in my project folder on the Raspberry Pi. Then, I used the pygame library to play and stop the music file, because playsound couldn’t stop a song once it started. I added commands to my Python script so that when I say “play music,” Tom plays the song, and when I say “stop music,” the song stops. I also edited my script so that when I control the light or the music, Tom says my name in the response, like “Turning the light on, Sarayu,” or “Playing your music now, Sarayu.”
+
+The voice assistant listens through a microphone for commands. If I say “Tom,” it sends what I said to OpenAI and I get an answer back. If I say “turn on the light,” Tom turns the relay on so the LED lights up and says my name. If I say “play music,” it loads the MP3 and plays it. If I say “stop music,” it stops the file right away. Adding my name to the speech makes the responses feel more friendly and personal.
 
 **Challenges I Faced**
 
-One challenge I had was learning that the playsound library couldn’t stop audio once it started, which would make my project stuck if I wanted to stop the song. To fix this, I installed the pygame library, which I hadn’t used before, so I had to learn how to set it up inside my virtual environment in VS Code. I also had to test different ways to get my voice commands right because sometimes my mic wouldn’t pick up the full phrase, so I made my commands more flexible to match partial phrases.
+One problem was that the playsound library could only play audio, but couldn’t stop it once it started, so I had to switch to pygame and learn how to use it. Another challenge was figuring out how to write the new commands into my existing code without breaking the other parts that control the light or use ChatGPT. I also learned how to make my voice commands more flexible, because sometimes the mic only picks up part of what I say. Finally, I practiced adding custom text to the speak function so Tom would always say my name in the answers for lights and music.
 
 **What I Learned**
-Adding this feature taught me more about handling audio files in Python and why choosing the right library is important. I also learned how to update my voice recognition checks to make sure they work even if my speech isn’t perfect. Overall, this improvement made my project feel more complete and closer to a real smart assistant.
+
+These new modifications helped me understand how to handle audio files in Python, use new libraries like pygame, and update voice recognition checks so they are not too strict. I also learned how to personalize the text-to-speech output to say my name, which makes the assistant feel more realistic and fun to use. Overall, this made my project feel closer to real smart speakers like Alexa or Siri but with my own twist.
+
+
 
 
 
