@@ -38,6 +38,22 @@ Through this project, I learned how to set up a Raspberry Pi and connect hardwar
 
 I also learned how speech recognition and text-to-speech work together with an AI model to make a real voice assistant. In the future, I want to add more voice commands so my assistant can control more lights or even play music when I say, “Hey Tom, play music.”
 
+# My Modifications
+**Voice Assistant Music Feature — Project Summary**
+
+For my Raspberry Pi voice assistant project, I added a music playback feature to make my assistant, Tom, more advanced. The goal was to have Tom not only answer questions using ChatGPT and control an LED light, but also be able to play and stop a song when told to do so.
+
+I downloaded a copyright-free MP3 file and saved it in my project folder. To play the music, I used the pygame as it lets me start and stop music in the middle of the program. I added extra commands to my Python code so when I say “play music,” Tom starts the song, and when I say “stop music,” it stops the song right away. This made my voice assistant more like a real smart speaker.
+The voice assistant listens for commands using the microphone and converts my speech into text. If it hears me say “play music,” it loads the MP3 file and plays it in the background. If I say “stop music,” it stops playing the file. This happens while the rest of the assistant still works normally, so I can still say “turn on the light,” “turn off the light,” or talk to Tom for answers using the OpenAI API.
+
+**Challenges I Faced**
+
+One challenge I had was learning that the playsound library couldn’t stop audio once it started, which would make my project stuck if I wanted to stop the song. To fix this, I installed the pygame library, which I hadn’t used before, so I had to learn how to set it up inside my virtual environment in VS Code. I also had to test different ways to get my voice commands right because sometimes my mic wouldn’t pick up the full phrase, so I made my commands more flexible to match partial phrases.
+
+**What I Learned**
+Adding this feature taught me more about handling audio files in Python and why choosing the right library is important. I also learned how to update my voice recognition checks to make sure they work even if my speech isn’t perfect. Overall, this improvement made my project feel more complete and closer to a real smart assistant.
+
+
 
 # Schematics 
 ![Headstone Image](Schematics)
