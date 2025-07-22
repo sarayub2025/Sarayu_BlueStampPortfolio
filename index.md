@@ -1,11 +1,6 @@
 # AI Voice Assistant
 This is a voice assistant I built using Raspberry Pi that listens to voice commands and turns LED lights on or off on a breadboard. It uses speech recognition, text-to-speech, and OpenAI’s API to understand what I say and respond like ChatGPT. The project shows how a Raspberry Pi can combine hardware control with AI to create a simple smart home assistant.
 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -61,6 +56,7 @@ These new modifications helped me understand how to handle audio files in Python
 
 # Schematics 
 ![Headstone Image](Schematics)
+Fig 1: Schematics on how to set up the breadboard
 
 
 # Code
