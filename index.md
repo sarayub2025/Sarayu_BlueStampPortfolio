@@ -51,13 +51,18 @@ import lgpio
 import speech_recognition as sr
 import pyttsx3
 import openai
+import pygame
+
+# Initialize pygame mixer for music playback
+pygame.mixer.init()
+music_playing = False
 
 # Initializing pyttsx3
 listening = True
 engine = pyttsx3.init()
 
 # Set your openai api key and customize the chatgpt role
-openai.api_key = "ABC"
+openai.api_key = "insert your open ai key here"
 messages = [{"role": "system", "content": "Your name is Tom and give answers in 2 lines"}]
 
 # Customizing the output voice
@@ -66,7 +71,7 @@ rate = engine.getProperty('rate')
 volume = engine.getProperty('volume')
 
 # Define the GPIO pin number for the relay
-RELAY_GPIO_PIN = 18
+RELAY_GPIO_PIN = 17
 
 # Initialize the GPIO
 h = lgpio.gpiochip_open(4)
@@ -92,6 +97,13 @@ def turn_off_light():
     lgpio.gpio_write(h, RELAY_GPIO_PIN, 0)
     print("Light turned OFF")
 
+def speak(text):
+    engine.setProperty('rate', 120)
+    engine.setProperty('volume', volume)
+    engine.setProperty('voice', 'greek')
+    engine.say(text)
+    engine.runAndWait()
+
 while listening:
     with sr.Microphone() as source:
         recognizer = sr.Recognizer()
@@ -102,25 +114,37 @@ while listening:
             print("Listening...")
             audio = recognizer.listen(source, timeout=5.0)
             response = recognizer.recognize_google(audio)
-            print(response)
+            print(f"Recognized speech: '{response}'")
 
-            if "tom" in response.lower():
-           
+            lower_response = response.lower()
+
+            if "tom" in lower_response:
                 response_from_openai = get_response(response)
-                engine.setProperty('rate', 120)
-                engine.setProperty('volume', volume)
-                engine.setProperty('voice', 'greek')
-                engine.say(response_from_openai)
-                engine.runAndWait()
-            
-            elif "turn on the light" in response.lower():
-                turn_on_light()
+                speak(response_from_openai)
 
-            elif "turn off the light" in response.lower():
+            elif "turn on the light" in lower_response:
+                turn_on_light()
+                speak("Light turned on")
+
+            elif "turn off the light" in lower_response:
                 turn_off_light()
-                
+                speak("Light turned off")
+
+            elif "play music" in lower_response:
+                if not music_playing:
+                    pygame.mixer.music.load('instrumental-undertone-music-275398.mp3')
+                    pygame.mixer.music.play()
+                    music_playing = True
+                    speak("Playing music now")
+
+            elif "stop music" in lower_response:
+                if music_playing:
+                    pygame.mixer.music.stop()
+                    music_playing = False
+                    speak("Music stopped")
+
             else:
-                print("Didn't recognize 'turn on the light' or 'turn off the light'.")
+                print("Didn't recognize a known command.")
 
         except sr.UnknownValueError:
             print("Didn't recognize anything.")
