@@ -204,7 +204,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| CanaKit Raspberry Pi 4 4GB Starter PRO Kit - 4 GB RAM | This item is used to set up the Raspberry Pi and connect it to your computer | $119.99 | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/CanaKit-Raspberry-4GB-Starter-Kit/dp/B07V5JTMV9/ref=sr_1_3?crid=3I3XY2ESCUCT9&dib=eyJ2IjoiMSJ9.rWngnqnkl0ze0Tu3Q89m-YyU-TuUu5H4EMJPDIgXQWCwbXT8lsJ8fb2-wg7gIbBJ8WM4PJbB1M3gRUYqjucM4RLndoVWVnz1DPY7kEp-sdrcjct9cl9cHpMy4d4CkWd3NQCEZYEA1BfUEJ9shmgH8GrvVNP6xx_vyfJFr-6t7JUC__VJ31efjqF0QijDPe1q_FoMVwdnQPxWnyEBmnnMduXCdDvDfe4RWoyXPgtMazFFI08-sM8kqzOL0v0Xz4Kt_lKxTMvz9h2eiFSLk27fE19Ox_DmrlnK7A6aIPg7UD0.e7PYmGO8gXf6rqj6ZP-MNcl8u78WcJz-fjfFvesuiVw&dib_tag=se&keywords=cana%2Bkit%2Braspberry%2Bpi%2B4&qid=1719254845&s=electronics&sprefix=canakit%2Braspberry%2Bpi%2B4%2Celectronics%2C120&sr=1-3&th=1)"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 
