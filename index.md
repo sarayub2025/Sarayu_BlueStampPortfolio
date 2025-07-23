@@ -37,6 +37,9 @@ Through this project, I learned how to set up a Raspberry Pi and connect hardwar
 I also learned how speech recognition and text-to-speech work together with an AI model to make a real voice assistant. In the future, I want to add more voice commands so my assistant can control more lights or even play music when I say, “Hey Tom, play music.”
 
 # My Modifications
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8sLdVZDFQ28?si=OYwdPT8X6mSAD3ah" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 **Modifications Summary**
 
 For my Raspberry Pi voice assistant project, I made two extra improvements to make my assistant, Tom, feel more like a real smart home helper. First, I added a feature so Tom can play and stop music when I say voice commands. Second, I made Tom respond to me by saying my name in every reply when I turn the light on or off or when I play or stop music. This made the whole experience feel more personal and fun.
